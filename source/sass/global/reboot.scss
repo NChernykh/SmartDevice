@@ -31,8 +31,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3 {
+  margin: 0 auto;
+  font-family:"Roboto Condensed", "Arial", sans-serif;
+}
+
 a {
-  color: $color-default-black;
+  font-family: $font-family--;
+  color: $color-default-white;
   text-decoration: none;
 }
 

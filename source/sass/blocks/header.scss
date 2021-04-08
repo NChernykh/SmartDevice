@@ -1,36 +1,39 @@
 .header {
   display: flex;
   align-items: center;
-  min-height: 100px;
+  min-height: 120px;
+  margin: 0 auto;
   padding: 0 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: $color-default-black;
 
-  background-color: $color-blue;
-
-  &__wrapper {
-    display: flex;
-    align-items: center;
+  @include viewport--md {
+    min-height: 91px;
+    padding: 0 25px;
   }
 
-  a,
-  p {
-    color: $color-white;
+  @include viewport--sm {
+    min-height: 73px;
+    padding: 0 17px;
   }
+}
 
-  ul {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+.header__wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1411px;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 5;
+}
 
-    list-style: none;
-
-    li {
-      margin-right: 20px;
-    }
-  }
-
-  .main-nav__toggle {
-    display: none;
+.header__logo {
+  @include viewport--sm {
+    width: 38px;
+    height: 38px;
   }
 }

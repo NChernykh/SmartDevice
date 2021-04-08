@@ -1,0 +1,96 @@
+.main-nav {
+  @include viewport--md {
+    padding-bottom: 12px;
+  }
+}
+.main-nav__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  margin-right: 50px;
+
+  @include viewport--md {
+    margin-right: -10px;
+  }
+
+  &--mail {
+    margin-right: 90px;
+
+    a {
+      padding-left: 38px;
+    }
+
+    @include viewport--md {
+      margin-right: 22px;
+    }
+
+    @include viewport--sm {
+      margin-right: 11px;
+    }
+  }
+
+  &--button {
+    padding: 10px 27px 10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+
+    @include viewport--md {
+      display: none;
+    }
+
+    a {
+      padding-left: 0;
+      font-family:"Roboto Condensed", "Arial", sans-serif;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  padding-left: 32px;
+  text-align: center;
+
+  &:hover {
+    color: $regent-gray;
+  }
+
+  @include viewport--md {
+    &:hover svg {
+      fill: $color-default-white;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.main-nav__link-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: $color-blue;
+
+  @include viewport--md {
+    width: 25px;
+    height: 24px;
+  }
+}

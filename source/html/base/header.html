@@ -1,25 +1,35 @@
 <header class="header @@if (context.mod) { header--@@mod }">
   <div class="header__wrapper">
-    <a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
-      Логотип
+    <a class="header__logo" aria-label="Переход на главную">
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg">
+        <img src="img/svg/logo-desktop.svg" width="202" height="52" alt="Смарт Девайс">
+      </picture>
     </a>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-        <svg width="20" height="20">
-          <use xlink:href="#icon-burger"></use>
-        </svg>
-      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Страница 1</a>
+          <li class="main-nav__item main-nav__item--mail">
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="mailto:info@sd.ru" } aria-label="Написать письмо">
+              <svg class="main-nav__link-icon" width="19" height="14">
+                <use xlink:href="img/sprite_auto.svg#envelope"></use>
+              </svg>
+              <span>info@sd.ru</span>
+            </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Страница 2</a>
+          <li class="main-nav__item main-nav__item--phone">
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="tel:+74950005252" } aria-label="Позонить">
+              <svg class="main-nav__link-icon" width="18" height="18">
+                <use xlink:href="img/sprite_auto.svg#phone"></use>
+              </svg>
+              <span>+7 (495) 000 52 52</span>
+            </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Страница 3</a>
+          <li class="main-nav__item main-nav__item--button">
+            <a class="main-nav__link js-modal @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>
+              <span>Заказать звонок</span>
+            </a>
           </li>
         </ul>
       </div>

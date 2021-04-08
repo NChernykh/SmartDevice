@@ -6,7 +6,7 @@
   <title>ProjectName — Главная</title>
 
 </head>
-<body>
+<body style="opacity: 1;">
 
   <div style="display: none;">
     @@include("build/img/sprite_auto.svg")
@@ -18,7 +18,19 @@
     })
 
     <main>
+      <h1 class="visually-hidden">Магазин печатных плат</h1>
+      <section class="intro">
+        <div class="intro__wrapper">
+          <div class="intro__content">
+            <h2 class="intro__title">Печатные платы</h2>
+            <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <a class="intro__button intro__button--desktop"href="#" >Получить бесплатную консультацию</a>
+            <a class="intro__button intro__button--mobile"href="#" >Бесплатная консультация</a>
+          </div>
+        </div>
+      </section>
       <div class="container">
+
         <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
         <p><a href="#" data-modal="success">modal--success link</a></p>
       </div>
