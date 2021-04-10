@@ -1,0 +1,13 @@
+.social__link {
+  display: inline-block;
+  margin-right: 7px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover svg {
+    border: 2px solid $color-blue;
+    border-radius: 50%;
+  }
+}

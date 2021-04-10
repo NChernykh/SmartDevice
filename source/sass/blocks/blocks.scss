@@ -1,0 +1,50 @@
+.blocks {
+  margin-right: 230px;
+
+  @include viewport--lg {
+    margin-right: 170px;
+  }
+
+  @include viewport--md {
+    width: 50%;
+    margin-right: 0;
+    padding-top: 38px;
+    padding-bottom: 35px;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+}
+
+.blocks__wrapper {
+  @include viewport--md {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include viewport--md {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.blocks__colomn {
+  display: flex;
+  flex-direction: column;
+  margin-right: 75px;
+
+  &:first-child {
+    flex: 1 0 auto;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include viewport--lg {
+    margin-right: 50px;
+  }
+}
