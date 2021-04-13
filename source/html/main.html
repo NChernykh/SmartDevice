@@ -6,7 +6,7 @@
   <title>ProjectName — Главная</title>
 
 </head>
-<body style="opacity: 1;">
+<body style="opacity: 0.5;">
 
   <div style="display: none;">
     @@include("build/img/sprite_auto.svg")
@@ -29,26 +29,114 @@
           </div>
         </div>
       </section>
+      <section class="about">
+        <h2 class="visually-hidden">Преимущества компании</h2>
+        <div class="container">
+          <div class="features">
+            <ul class="features__list">
+              <li class="features__item">
+                <svg class="features__item-icon" width="29" height="35">
+                  <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
+                </svg>
+                <h3 class="features__subtitle">Оперативные сроки </h3>
+                <p class="features__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+              </li>
+              <li class="features__item">
+                <svg class="features__item-icon" width="35" height="35">
+                  <use xlink:href="img/sprite_auto.svg#hired"></use>
+                </svg>
+                <h3 class="features__subtitle">Крупные поставщики</h3>
+                <p class="features__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+                </p>
+              </li>
+              <li class="features__item">
+                <svg class="features__item-icon" width="36" height="35">
+                  <use xlink:href="img/sprite_auto.svg#detective"></use>
+                </svg>
+                <h3 class="features__subtitle">Полная конфиденциальность</h3>
+                <p class="features__text">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+              </li>
+              <li class="features__item">
+                <svg class="features__item-icon" width="35" height="35">
+                  <use xlink:href="img/sprite_auto.svg#tag"></use>
+                </svg>
+                <h3 class="features__subtitle">Персонализация стоимости</h3>
+                <p class="features__text">Мы  подбираем  определенную  фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="company">
+            <h2 class="company__title">О компании</h2>
+            <div class="company__content">
+              <p class="company__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+              <p class="company__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+            </div>
+            <button class="company__button">Подробнее</button>
+          </div>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="container">
+          <h2 class="visually-hidden">Каталог товаров и услуг</h2>
+          <p class="catalog__text">Service Device предлагает следующие товары и услуги</p>
+          <div class="catalog__cards">
+            <div class="card">
+              <h3 class="card__title">Производство печатных плат</h3>
+              <a href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/card-1-mobile@1x.webp, img/content/card-1-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/card-1-tablet@1x.webp, img/content/card-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/card-1-desktop@1x.webp, img/content/card-1-desktop@2x.webp 2x">
+                  <!--1x: 370px; 2x:740px-->
+                  <img src="img/content/card-1-desktop@1x.jpg" srcset="img/content/card-1-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">
+                </picture>
+              </a>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Монтаж печатных плат</h3>
+              <a href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/card-2-mobile@1x.webp, img/content/card-2-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/card-2-tablet@1x.webp, img/content/card-2-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/card-2-desktop@1x.webp, img/content/card-2-desktop@2x.webp 2x">
+                  <!--1x: 370px; 2x:740px-->
+                  <img src="img/content/card-2-desktop@1x.jpg" srcset="img/content/card-2-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">
+                </picture>
+              </a>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Комплектующие для светотехники</h3>
+              <a href="#">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/card-3-mobile@1x.webp, img/content/card-3-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/card-3-tablet@1x.webp, img/content/card-3-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/card-3-desktop@1x.webp, img/content/card-3-desktop@2x.webp 2x">
+                  <!--1x: 370px; 2x:740px-->
+                  <img src="img/content/card-2-desktop@1x.jpg" srcset="img/content/card-2-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">
+                </picture>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <div class="container">
+          <div class="feedback__form">
+            @@include("source/html/components/form.html")
+          </div>
+        </div>
+      </section>
       <div class="container">
         <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
         <p><a href="#" data-modal="success">modal--success link</a></p>
       </div>
-      <section class="about">
-
-      </section>
     </main>
 
     @@include("source/html/base/footer.html")
 
     @@include("source/html/base/modal.html", {
       "name": "feedback"
-    })
-
-    @@include("source/html/base/modal.html", {
-      "name": "success",
-      "fitContent": true,
-      "noScale": true,
-      "mod": "some-mod"
     })
   </div>
 

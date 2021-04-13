@@ -1,6 +1,6 @@
 .intro {
   position: relative;
-  margin-bottom: 150px;
+  margin-bottom: 30px;
   background-color: #000;
   background-image: url(../img/bg/intro-bg-desktop@1x.jpg);
   background-repeat: no-repeat;
@@ -14,6 +14,7 @@
   }
 
   @include viewport--md {
+    margin-bottom: 54px;
     background-image: url("../img/bg/intro-bg-tablet@1x.jpg");
 
     @include retina {
@@ -23,6 +24,7 @@
   }
 
   @include viewport--sm {
+    margin-bottom: 38px;
     background-image: url("../img/bg/intro-bg-mobile@1x.jpg");
 
     @include retina {

@@ -1,0 +1,118 @@
+.features {
+  margin-bottom: 76px;
+
+  @include viewport--md {
+    margin-bottom: 26px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 37px;
+  }
+}
+
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include viewport--sm {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+.features__item {
+  width: 570px;
+  height: 299px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  padding: 39px 40px 20px 43px;
+  border: 1px solid $color-whisper;
+  border-left: 3px solid $color-blue;
+  background-color: $color-default-white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-blue;
+
+    h3,
+    p {
+      color: $color-default-white;
+    }
+
+    .about__item-icon {
+      fill: $color-default-white;
+    }
+  }
+
+  &:last-child,
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+
+  @include viewport--lg {
+    width: 450px;
+    height: 306px;
+  }
+
+  @include viewport--md {
+    width: 345px;
+    height: auto;
+    min-height: 232px;
+    padding: 24px 21px 20px 25px;
+    border-left: 2px solid $color-blue;
+  }
+
+  @include viewport--sm {
+    margin-right: 0;
+    width: auto;
+    margin-bottom: 20px;
+    padding: 24px 16px 24px 26px;
+
+    &:nth-child(2) {
+      padding-right: 12px;
+    }
+  }
+}
+
+.features__item-icon {
+  margin-bottom: 15px;
+  fill: $color-blue;
+
+  @include viewport--md {
+    margin-bottom: 0;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 6px;
+  }
+}
+
+.features__subtitle {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  color: $color-blue;
+
+  @include viewport--md {
+    margin-bottom: 8px;
+  }
+
+  @include viewport--sm {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.features__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: $dim-gray;
+}

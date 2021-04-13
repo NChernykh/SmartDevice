@@ -1,0 +1,49 @@
+.form__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+}
+
+.form__text {
+  margin: 0;
+  margin-left: 5px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+}
+
+.form__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__item {
+  margin-bottom: 40px;
+
+  &--half {
+    width: 50%;
+  }
+}
+
+.form__input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  background: #FFFFFF;
+  opacity: 0.1;
+
+  &--half {
+    width: 275px;
+  }
+}
+
+.form__button {
+  width: 270px;
+  margin-right: 30px;
+}

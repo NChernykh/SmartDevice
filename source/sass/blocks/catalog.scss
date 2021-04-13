@@ -1,0 +1,38 @@
+.catalog {
+  background-color: $color-black;
+  padding-top: 93px;
+  padding-bottom: 109px;
+
+  @include viewport--md {
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+}
+
+.catalog__text {
+  margin: 0;
+  margin-bottom: 47px;
+  font-family: "Roboto Condensed","Arial",sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+
+  @include viewport--md {
+    margin-right: 89px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @include viewport--sm {
+    margin: 0 9px 40px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.catalog__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

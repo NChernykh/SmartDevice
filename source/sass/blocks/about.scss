@@ -1,11 +1,19 @@
 .about {
-  height: 2636px;
+  padding-top: 76px;
+  margin-bottom: 110px;
+  background-image: url('../../img/bg/about-bg-desktop@1x.png');
+  background-repeat: no-repeat;
+  background-position:center -65px;
 
   @include viewport--md {
-    height: 2630px;
+    margin-bottom: 82px;
+    padding-top: 0;
+    background-position: -350px -140px;
+    background-size: auto;
   }
 
-  @include viewport--md {
-    height: 3290px;
+  @include viewport--sm {
+    margin-bottom: 64px;
+    background-position: -678px 440px;
   }
 }
