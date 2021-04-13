@@ -5,6 +5,18 @@
   font-size: 36px;
   line-height: 51px;
   color: $color-default-white;
+
+  @include viewport--md {
+    margin-bottom: 15px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 39px;
+  }
 }
 
 .form__text {
@@ -14,36 +26,146 @@
   font-size: 16px;
   line-height: 22px;
   color: $color-default-white;
+
+  @include viewport--md {
+    margin-bottom: 55px;
+  }
+
+  @include viewport--sm {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
 }
 
 .form__block {
   display: flex;
   justify-content: space-between;
+
+  @include viewport--sm {
+    flex-direction: column;
+  }
 }
 
 .form__item {
   margin-bottom: 40px;
+  width: 275px;
 
-  &--half {
-    width: 50%;
+  &--textarea {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  @include viewport--md {
+    &--textarea {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include viewport--sm {
+    margin-bottom: 31px;
+
+    &--textarea {
+      margin-bottom: 23px;
+    }
+
+    textarea {
+      height: 108px;
+    }
   }
 }
 
 .form__input {
   width: 100%;
-  padding: 14px 16px;
+  padding: 14px 20px;
   font-size: 16px;
   line-height: 22px;
   border: none;
-  background: #FFFFFF;
-  opacity: 0.1;
+  color: $color-default-white;
+  border: none;
+  background-color: fade-out($color-default-white, 0.9);
 
-  &--half {
-    width: 275px;
+  @include viewport--sm {
+    width: 100%;
+  }
+
+  &::placeholder {
+    color: fade-out($color-default-white, 0.2);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    opacity: 0.7;
   }
 }
 
 .form__button {
-  width: 270px;
+  width: 48%;
   margin-right: 30px;
+  padding: 14px 20px;
+  height: fit-content;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  background-color: $color-blue;
+  border: 1px solid $color-default-white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 21px;
+  }
+}
+
+.form__checkbox {
+  position: relative;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 40px;
+  cursor: pointer;
+  user-select: none;
+
+  @include viewport--sm {
+    padding-left: 35px;
+  }
+}
+
+.form__checkbox-input {
+  margin: 0;
+  appearance: none;
+
+  &:checked ~ .form__checkbox-name::before {
+    background-image: url("../../img/svg/tick.svg");
+    background-size: 8px 5px;
+  }
+}
+
+.form__checkbox-name {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  color: fade-out($color-default-white, 0.2);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color-default-white;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  @include viewport--sm {
+    &::before {
+    left: 0;
+    }
+  }
 }

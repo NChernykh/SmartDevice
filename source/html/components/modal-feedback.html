@@ -1,1 +1,30 @@
-<p class="modal__description">Обычная модалка</p>
+<form class="form" action="https://echo.htmlacademy.ru" method="POST">
+  <h3 class="form__title modal__title">Закажите звонок</h3>
+  <p class="form__text modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+  <div class="form__block modal__block">
+    <div class="form__item modal__item">
+      <label class="form__label" aria-label="Введите Имя">
+        <input class="form__input" type="text" name="user_name" placeholder="Имя" required>
+      </label>
+    </div>
+    <div class="form__item modal__item">
+      <label class="form__label" aria-label="Введите номер телефона">
+        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+      </label>
+    </div>
+  </div>
+  <div class="form__item  form__item--textarea modal__item">
+    <label class="form__label" aria-label="Введите ваш вопрос">
+      <textarea class="form__input" name="comment" cols="30" rows="6" placeholder="Ваш вопрос"></textarea>
+    </label>
+  </div>
+  <div class="form__block modal__block">
+    <button class="button form__button modal__item--button">Отправить</button>
+    <div class="form__item modal__item">
+      <label class="form__checkbox modal__checkbox">
+        <input class="form__checkbox-input" type="checkbox" name="checkbox" checked="checked">
+        <span class="form__checkbox-name">Я согласен на обработку  персональных данных</span>
+      </label>
+    </div>
+  </div>
+</form>

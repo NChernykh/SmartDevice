@@ -23,11 +23,16 @@
   @include viewport--md {
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 25px;
+    padding-right: 18px;
+
+    &--contacts {
+      padding-left: 16px;
+    }
   }
 
-  @include viewport--md {
-    padding-left: 15px;
-    padding-right: 15px;
+  @include viewport--sm {
+    padding-left: 16px;
   }
 }
 

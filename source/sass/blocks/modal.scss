@@ -37,10 +37,8 @@
     width: 100%;
     min-height: 100%;
     padding: 60px 40px;
-
-    @include viewport--sm {
-      padding: 60px 16px;
-    }
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &__overlay {
@@ -57,10 +55,10 @@
   &__content {
     position: relative;
 
-    width: 600px;
-    padding: 40px;
+    width: 490px;
+    padding: 33px 40px 7px;
 
-    background-color: $color-default-white;
+    background-color: $color-blue;
 
     @include viewport--sm {
       width: 100%;
@@ -70,8 +68,12 @@
 
   &__close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 22px;
+    right: 22px;
+
+    svg {
+      fill: $color-default-white;
+    }
   }
 
   &--responsive {
@@ -103,5 +105,41 @@
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
+  }
+}
+
+.modal__title {
+  font-size: 28px;
+  line-height: 39px;
+}
+
+.modal__text {
+  margin-right: 16px;
+  margin-bottom: 30px;
+}
+
+.modal__block {
+  flex-direction: column;
+}
+
+.modal__item {
+  width: 100%;
+  margin-bottom: 33px;
+
+  textarea {
+    height: 106px;
+  }
+
+  &--button {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+.modal__checkbox {
+  padding-left: 50px;
+
+  span:before {
+    left: 0;
   }
 }

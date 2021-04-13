@@ -34,30 +34,6 @@
     }
   }
 
-  &--button {
-    padding: 10px 27px 10px;
-    border: 1px solid #FFFFFF;
-    border-radius: 5px;
-
-    @include viewport--md {
-      display: none;
-    }
-
-    a {
-      padding-left: 0;
-      font-family:"Roboto Condensed", "Arial", sans-serif;
-    }
-
-    span {
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 16px;
-      text-align: center;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-  }
-
   &:last-child {
     margin-right: 0;
   }
@@ -67,6 +43,18 @@
   position: relative;
   padding-left: 32px;
   text-align: center;
+
+  &--button {
+    padding: 10px 27px 10px;
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid #FFFFFF;
+
+    @include viewport--md {
+      display: none;
+      border: none;
+    }
+  }
 
   &:hover {
     color: $regent-gray;

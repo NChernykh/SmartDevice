@@ -73,12 +73,21 @@
           <div>Компонент</div>
         </section>
 
-        <section>
+        <section style="background-color: darkgray;">
           <h2>Форма заказа</h2>
 
           <p>.form</p>
 
           @@include("source/html/components/form.html")
+
+        </section>
+
+        <section style="background-color: darkgray;">
+          <h2>Модальное окно</h2>
+
+          <p>.modal--feedback</p>
+
+          @@include("source/html/components/modal-feedback.html")
 
         </section>
 
@@ -92,6 +101,7 @@
     </main>
 
     @@include("source/html/base/footer.html")
+
   </div>
 
   <script src="js/vendor.min.js"></script>

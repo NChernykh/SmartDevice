@@ -1,6 +1,6 @@
 .feedback {
   padding-top: 90px;
-  padding-bottom: 113px;
+  padding-bottom: 78px;
   background-image: url(../../img/bg/feedback-bg-desktop@1x.png);
   background-repeat: no-repeat;
   background-size: 91%;
@@ -12,18 +12,34 @@
     background-size: 3840px auto;
   }
 
-  @include viewport--md {
-    background-image: url("../img/bg/feedback-bg-tablet@1x.jpg");
+  @include viewport--lg {
+    background-image: none;
+  }
 
-    @include retina {
-      background-image: url("../img/bg/feedback-bg-tablet@2x.jpg");
-      background-size: 1540px auto;
-    }
+  @include viewport--md {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
+  @include viewport--sm {
+    padding-top: 29px;
+    padding-bottom: 12px;
   }
 }
 
 .feedback__form {
   width: 50%;
   margin-left: auto;
-  padding-left: 10px;
+  padding-left: 13px;
+
+  @include viewport--lg {
+    width: 590px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+    margin: 0 auto;
+  }
 }

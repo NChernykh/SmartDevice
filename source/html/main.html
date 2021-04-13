@@ -6,7 +6,7 @@
   <title>ProjectName — Главная</title>
 
 </head>
-<body style="opacity: 0.5;">
+<body style="opacity: 1;">
 
   <div style="display: none;">
     @@include("build/img/sprite_auto.svg")
@@ -24,15 +24,18 @@
           <div class="intro__content">
             <h2 class="intro__title">Печатные платы</h2>
             <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="intro__button intro__button--desktop"href="#" >Получить бесплатную консультацию</a>
-            <a class="intro__button intro__button--mobile"href="#" >Бесплатная консультация</a>
+            <a data-scroll class="button intro__button"href="#feedback" >
+              <span class="intro__button-desktop">Получить бесплатную консультацию</span>
+              <span class="intro__button-mobile">Бесплатная консультация</span>
+            </a>
+            <a data-scroll class="intro__scroll" href="#features">Скролл вниз</a>
           </div>
         </div>
       </section>
       <section class="about">
         <h2 class="visually-hidden">Преимущества компании</h2>
         <div class="container">
-          <div class="features">
+          <div class="features" id="features">
             <ul class="features__list">
               <li class="features__item">
                 <svg class="features__item-icon" width="29" height="35">
@@ -71,7 +74,7 @@
               <p class="company__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
               <p class="company__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
             </div>
-            <button class="company__button">Подробнее</button>
+            <button class="button company__button">Подробнее</button>
           </div>
         </div>
       </section>
@@ -119,7 +122,7 @@
           </div>
         </div>
       </section>
-      <section class="feedback">
+      <section class="feedback" id="feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="container">
           <div class="feedback__form">

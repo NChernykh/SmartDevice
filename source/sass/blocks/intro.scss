@@ -55,6 +55,7 @@
 }
 
 .intro__content {
+  position: relative;
   width: 56%;
 
   @include viewport--md {
@@ -124,22 +125,11 @@
 }
 
 .intro__button {
-  display: inline-block;
   margin-left: 98px;
   padding: 17px 45px 19px;
-  font-family:"Roboto Condensed", "Arial", sans-serif;
-  font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   background: $color-blue;
-  border-radius: 5px;
-
-  &--mobile {
-    display: none;
-  }
 
   @include viewport--md {
     margin-left: 50px;
@@ -148,18 +138,38 @@
 
   @include viewport--sm {
     margin-left: 0;
-
-    &--desktop {
-      display: none;
-    }
-
-    &--mobile {
-      display: block;
-      width: 287px;
-    }
+    width: 287px;
   }
 
   &:hover {
     color: $regent-gray;
+  }
+}
+
+.intro__button-mobile {
+  display: none;
+
+  @include viewport--sm {
+    display: block;
+  }
+}
+
+.intro__button-desktop {
+  @include viewport--sm {
+    display: none;
+  }
+}
+
+.intro__scroll {
+  position: absolute;
+  bottom: -150px;
+  left: -35px;
+  font-size: 14px;
+  line-height: 16px;
+  color: fade-out($color-default-white, 0.5);
+  transform: rotate(-90deg);
+
+  @include viewport--md {
+    display: none;
   }
 }

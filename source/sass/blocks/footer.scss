@@ -10,7 +10,12 @@
 
   @include viewport--md {
     border: none;
+    padding-top: 19px;
     padding-bottom: 0;
+  }
+
+  @include viewport--sm {
+    padding-top: 45px;
   }
 }
 
@@ -127,7 +132,7 @@
       width: 16px;
       height: 1px;
       right: 0;
-      top: 0;
+      top: 8px;
       background-color: $color-silver;
     }
 
@@ -141,7 +146,7 @@
 
     &--show + .footer__box {
       display: block;
-      padding-bottom: 20px;
+      padding-bottom: 30px;
     }
   }
 }
@@ -211,6 +216,7 @@
 
     &--tablet {
       margin: 0;
+      padding-left: 17px;
       display: block;
     }
   }
@@ -222,6 +228,7 @@
     }
     &--tablet {
       margin-bottom: 30px;
+      padding-left: 0;
     }
 
     &:last-child {
