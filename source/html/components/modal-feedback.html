@@ -4,12 +4,12 @@
   <div class="form__block modal__block">
     <div class="form__item modal__item">
       <label class="form__label" aria-label="Введите Имя">
-        <input class="form__input" type="text" name="user_name" placeholder="Имя" required>
+        <input data-name class="form__input" type="text" name="user_name" placeholder="Имя" required>
       </label>
     </div>
     <div class="form__item modal__item">
       <label class="form__label" aria-label="Введите номер телефона">
-        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" data-mask="+7 ___ ___-____" required>
       </label>
     </div>
   </div>
@@ -19,7 +19,7 @@
     </label>
   </div>
   <div class="form__block modal__block">
-    <button class="button form__button modal__item--button">Отправить</button>
+    <button class="button form__button modal__item--button" type="submit">Отправить</button>
     <div class="form__item modal__item">
       <label class="form__checkbox modal__checkbox">
         <input class="form__checkbox-input" type="checkbox" name="checkbox" checked="checked">

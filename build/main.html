@@ -7,33 +7,6 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="description" content="Project Name - Smart Device">
 
-<!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* Mobile layout by default */
-    background-image: url( "../../img/mobile.jpg");
-  }
-  /* Tablet */
-  @media ( min-width: 768px ) {
-    HTML {
-      /* Tablet layout */
-      background-image: url( "../../img/tablet.jpg");
-    }
-  }
-  /* Desktop */
-  @media ( min-width: 1024px ) {
-    HTML {
-      /* Desktop layout */
-      background-image: url( "../../img/modal.jpg");
-    }
-  }
-</style>
-<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-<script src="../node_modules/pixel-glass/script.js"></script>
-<!-- // Pixel Glass -->
-
 <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
 <link rel="preload" href="fonts/roboto-condensed-700.woff2" as="font" crossorigin="anonymous">
 <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
@@ -254,7 +227,7 @@
     </div>
     <div class="form__item">
       <label class="form__label" aria-label="Введите номер телефона">
-        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" data-mask="+7 ___ ___-____" required>
       </label>
     </div>
   </div>
@@ -264,7 +237,7 @@
     </label>
   </div>
   <div class="form__block">
-    <button class="button form__button">Задать вопрос</button>
+    <button class="button form__button" type="submit">Задать вопрос</button>
     <div class="form__item">
       <label class="form__checkbox">
         <input class="form__checkbox-input" type="checkbox" name="checkbox" checked="checked">
@@ -364,12 +337,12 @@
   <div class="form__block modal__block">
     <div class="form__item modal__item">
       <label class="form__label" aria-label="Введите Имя">
-        <input class="form__input" type="text" name="user_name" placeholder="Имя" required>
+        <input data-name class="form__input" type="text" name="user_name" placeholder="Имя" required>
       </label>
     </div>
     <div class="form__item modal__item">
       <label class="form__label" aria-label="Введите номер телефона">
-        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" data-mask="+7 ___ ___-____" required>
       </label>
     </div>
   </div>
@@ -379,7 +352,7 @@
     </label>
   </div>
   <div class="form__block modal__block">
-    <button class="button form__button modal__item--button">Отправить</button>
+    <button class="button form__button modal__item--button" type="submit">Отправить</button>
     <div class="form__item modal__item">
       <label class="form__checkbox modal__checkbox">
         <input class="form__checkbox-input" type="checkbox" name="checkbox" checked="checked">

@@ -54,5 +54,8 @@
   },
   "engines": {
     "node": "8.15"
+  },
+  "dependencies": {
+    "inputmask": "^5.0.5"
   }
 }

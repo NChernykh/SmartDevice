@@ -9,7 +9,7 @@
     </div>
     <div class="form__item">
       <label class="form__label" aria-label="Введите номер телефона">
-        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" data-mask="+7 ___ ___-____" required>
       </label>
     </div>
   </div>
@@ -19,7 +19,7 @@
     </label>
   </div>
   <div class="form__block">
-    <button class="button form__button">Задать вопрос</button>
+    <button class="button form__button" type="submit">Задать вопрос</button>
     <div class="form__item">
       <label class="form__checkbox">
         <input class="form__checkbox-input" type="checkbox" name="checkbox" checked="checked">

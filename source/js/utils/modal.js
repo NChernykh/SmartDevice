@@ -1,7 +1,8 @@
 import {disableScrolling, enableScrolling} from './scroll-lock';
 
-const openModal = (modal, callback, preventScrollLock) => {
+const openModal = (modal, callback, preventScrollLock, inputFocus) => {
   modal.classList.add('modal--active');
+  inputFocus.focus();
 
   if (callback) {
     callback();
@@ -50,7 +51,7 @@ const setModalListeners = (modal, closeCallback, preventScrollLock) => {
   });
 };
 
-const setupModal = (modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock) => {
+const setupModal = (modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock, inputFocus) => {
   if (modalBtns) {
 
     modalBtns.forEach((btn) => {
@@ -58,7 +59,7 @@ const setupModal = (modal, closeCallback, modalBtns, openCallback, noPrevDefault
         if (!noPrevDefault) {
           evt.preventDefault();
         }
-        openModal(modal, openCallback, preventScrollLock);
+        openModal(modal, openCallback, preventScrollLock, inputFocus);
       });
     });
   }
