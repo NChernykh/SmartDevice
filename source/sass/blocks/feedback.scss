@@ -1,7 +1,7 @@
 .feedback {
   padding-top: 90px;
   padding-bottom: 78px;
-  background-image: url(../../img/bg/feedback-bg-desktop@1x.png);
+  background-image: url("../img/bg/feedback-bg-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 91%;
   background-position: 174px -62px;
@@ -13,12 +13,13 @@
   }
 
   @include viewport--lg {
-    background-image: none;
+    background-position: 0 150px;
   }
 
   @include viewport--md {
     padding-top: 80px;
     padding-bottom: 70px;
+    background-image: none;
   }
 
   @include viewport--sm {
@@ -32,7 +33,7 @@
   margin-left: auto;
   padding-left: 13px;
 
-  @include viewport--lg {
+  @include viewport--md {
     width: 590px;
     margin: 0 auto;
     padding-left: 0;

@@ -380,7 +380,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0 auto;
   font-family: "Roboto Condensed", "Arial", sans-serif; }
 
@@ -487,12 +489,12 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   min-height: calc(100 * var(--vh, 1vh));
   overflow-x: hidden; }
   .wrapper--no-scrollbar {
     height: 100vh;
-    height: calc(100 * var(--vh, 1vh));
+    min-height: calc(100 * var(--vh, 1vh));
     -ms-overflow-style: none;
     scrollbar-width: none; }
     .wrapper--no-scrollbar::-webkit-scrollbar {
@@ -638,7 +640,7 @@ button,
     padding: 10px 27px 10px;
     font-size: 14px;
     line-height: 16px;
-    border: 1px solid #FFFFFF; }
+    border: 1px solid #ffffff; }
     @media (max-width: 1023px) {
       .main-nav__link--button {
         display: none;
@@ -664,12 +666,12 @@ button,
 .intro {
   position: relative;
   margin-bottom: 30px;
-  background-color: #000;
-  background-image: url(../img/bg/intro-bg-desktop@1x.jpg);
+  background-color: #000000;
+  background-image: url("../img/bg/intro-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: #fff; }
+  color: #ffffff; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .intro {
       background-image: url("../img/bg/intro-bg-desktop@2x.jpg");
@@ -1029,7 +1031,7 @@ button,
 .catalog__text {
   margin: 0;
   margin-bottom: 47px;
-  font-family: "Roboto Condensed","Arial",sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
@@ -1086,7 +1088,7 @@ button,
     width: 63px;
     height: 63px;
     background-color: #00b2ff;
-    background-image: url(../../img/sprite/arrow.svg);
+    background-image: url("../../img/sprite/arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer; }
@@ -1125,7 +1127,7 @@ button,
 .feedback {
   padding-top: 90px;
   padding-bottom: 78px;
-  background-image: url(../../img/bg/feedback-bg-desktop@1x.png);
+  background-image: url("../img/bg/feedback-bg-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 91%;
   background-position: 174px -62px;
@@ -1136,11 +1138,12 @@ button,
       background-size: 3840px auto; } }
   @media (max-width: 1439px) {
     .feedback {
-      background-image: none; } }
+      background-position: 0 150px; } }
   @media (max-width: 1023px) {
     .feedback {
       padding-top: 80px;
-      padding-bottom: 70px; } }
+      padding-bottom: 70px;
+      background-image: none; } }
   @media (max-width: 767px) {
     .feedback {
       padding-top: 29px;
@@ -1150,7 +1153,7 @@ button,
   width: 50%;
   margin-left: auto;
   padding-left: 13px; }
-  @media (max-width: 1439px) {
+  @media (max-width: 1023px) {
     .feedback__form {
       width: 590px;
       margin: 0 auto;
@@ -1218,7 +1221,8 @@ button,
       margin-bottom: 40px; } }
   @media (max-width: 767px) {
     .form__item {
-      margin-bottom: 31px; }
+      margin-bottom: 31px;
+      width: 100%; }
       .form__item--textarea {
         margin-bottom: 23px; }
       .form__item textarea {
@@ -1231,11 +1235,7 @@ button,
   line-height: 22px;
   border: none;
   color: #ffffff;
-  border: none;
   background-color: rgba(255, 255, 255, 0.1); }
-  @media (max-width: 767px) {
-    .form__input {
-      width: 100%; } }
   .form__input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.8); }
   .form__input::-moz-placeholder {
@@ -1440,7 +1440,7 @@ button,
       width: 100%;
       margin-bottom: 27px; }
       .footer__subtitle::after, .footer__subtitle::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 16px;
         height: 1px;
@@ -1690,12 +1690,12 @@ button,
 
 .modal__checkbox {
   padding-left: 50px; }
-  .modal__checkbox span:before {
+  .modal__checkbox span::before {
     left: 0; }
 
 .button {
   display: inline-block;
-  font-family: "Roboto Condensed","Arial",sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.05em;

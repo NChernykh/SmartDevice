@@ -61,7 +61,6 @@
 }
 
 .footer__colomn-wrapper {
-
   @include viewport--md {
     display: flex;
     justify-content: space-between;
@@ -127,7 +126,7 @@
 
     &::after,
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 16px;
       height: 1px;
@@ -184,7 +183,7 @@
   line-height: 24px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color:fade-out($color-black, 0.5);
+  color: fade-out($color-black, 0.5);
 
   &--name {
     margin-right: 142px;
@@ -226,6 +225,7 @@
       margin: 0 auto;
       margin-bottom: 20px;
     }
+
     &--tablet {
       margin-bottom: 30px;
       padding-left: 0;
@@ -236,4 +236,3 @@
     }
   }
 }
-

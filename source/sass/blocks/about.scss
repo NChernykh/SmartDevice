@@ -1,9 +1,9 @@
 .about {
   padding-top: 76px;
   margin-bottom: 110px;
-  background-image: url('../../img/bg/about-bg-desktop@1x.png');
+  background-image: url("../../img/bg/about-bg-desktop@1x.png");
   background-repeat: no-repeat;
-  background-position:center -65px;
+  background-position: center -65px;
 
   @include viewport--md {
     margin-bottom: 82px;

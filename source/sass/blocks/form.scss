@@ -63,6 +63,7 @@
 
   @include viewport--sm {
     margin-bottom: 31px;
+    width: 100%;
 
     &--textarea {
       margin-bottom: 23px;
@@ -81,12 +82,7 @@
   line-height: 22px;
   border: none;
   color: $color-default-white;
-  border: none;
   background-color: fade-out($color-default-white, 0.9);
-
-  @include viewport--sm {
-    width: 100%;
-  }
 
   &::placeholder {
     color: fade-out($color-default-white, 0.2);
@@ -165,7 +161,7 @@
 
   @include viewport--sm {
     &::before {
-    left: 0;
+      left: 0;
     }
   }
 }
