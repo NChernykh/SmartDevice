@@ -12,6 +12,12 @@ const initAccordion = () => {
     return element;
   };
 
+  trigger.forEach((item) => {
+    if (item.classList.contains('footer__subtitle--nojs')) {
+      item.classList.remove('footer__subtitle--nojs');
+    }
+  });
+
   const hideContent = () => {
     trigger.forEach((item) => {
       item.classList.remove('footer__subtitle--show');

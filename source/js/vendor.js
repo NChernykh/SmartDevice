@@ -1,1 +1,1 @@
-// import './vendor/inputMask';
+// import './vendor/lazysizes.min.js';

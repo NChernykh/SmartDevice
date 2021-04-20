@@ -5,7 +5,7 @@ const modalFeedback = document.querySelector('.modal--feedback');
 const modalFeedbackBtns = document.querySelectorAll('[data-modal="feedback"]');
 const modalSuccess = document.querySelector('.modal--success');
 const modalSuccessBtns = document.querySelectorAll('[data-modal="success"]');
-const inputFocus = document.querySelector('[data-name]');
+const inputFocus = modalFeedback.querySelector('[data-name]');
 
 // аргументы setupModal(modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock)
 // возможна инициализация только с первыми аргументом,

@@ -48,15 +48,24 @@
 
 .form__item {
   margin-bottom: 40px;
+  margin-right: 30px;
   width: 275px;
 
   &--textarea {
     width: 100%;
+    margin-right: 0;
     margin-bottom: 30px;
   }
 
+  &:last-child {
+    margin-right: 0;
+  }
+
   @include viewport--md {
+    margin-right: 0;
+
     &--textarea {
+      width: 100%;
       margin-bottom: 40px;
     }
   }
@@ -94,6 +103,10 @@
     outline: none;
     opacity: 0.7;
   }
+}
+
+.form__input .error {
+  box-shadow: 0 0 15px red;
 }
 
 .form__button {
@@ -136,7 +149,7 @@
   appearance: none;
 
   &:checked ~ .form__checkbox-name::before {
-    background-image: url("../../img/svg/tick.svg");
+    background-image: url("../img/svg/tick.svg");
     background-size: 8px 5px;
   }
 }

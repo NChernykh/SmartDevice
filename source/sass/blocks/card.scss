@@ -41,10 +41,9 @@
     width: 63px;
     height: 63px;
     background-color: $color-blue;
-    background-image: url("../../img/sprite/arrow.svg");
+    background-image: url("../img/sprite/arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
-    cursor: pointer;
   }
 
   a {
@@ -52,6 +51,7 @@
     opacity: 0.2;
     width: 100%;
     height: 100%;
+    cursor: default;
   }
 
   img {

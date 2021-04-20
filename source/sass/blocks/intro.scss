@@ -10,12 +10,13 @@
 
   @include retina {
     background-image: url("../img/bg/intro-bg-desktop@2x.jpg");
-    background-size: 3840px auto;
+    background-size: 3840px 1762px;
   }
 
   @include viewport--md {
     margin-bottom: 54px;
     background-image: url("../img/bg/intro-bg-tablet@1x.jpg");
+    background-position: center top;
 
     @include retina {
       background-image: url("../img/bg/intro-bg-tablet@2x.jpg");

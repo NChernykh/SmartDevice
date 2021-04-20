@@ -32,6 +32,8 @@
 }
 
 .header__logo {
+  margin-right: 80px;
+
   @include viewport--sm {
     width: 38px;
     height: 38px;

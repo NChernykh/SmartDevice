@@ -1,10 +1,11 @@
 import {disableScrolling, enableScrolling} from './scroll-lock';
 
 const openModal = (modal, callback, preventScrollLock, inputFocus) => {
-  modal.classList.add('modal--active');
   if (inputFocus) {
     inputFocus.focus();
   }
+
+  modal.classList.add('modal--active');
 
   if (callback) {
     callback();

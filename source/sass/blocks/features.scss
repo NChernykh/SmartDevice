@@ -27,7 +27,7 @@
 
 .features__item {
   width: 570px;
-  height: 299px;
+  min-height: 299px;
   margin-bottom: 30px;
   margin-right: 30px;
   padding: 39px 40px 20px 43px;
@@ -44,7 +44,7 @@
       color: $color-default-white;
     }
 
-    .about__item-icon {
+    .features__item-icon {
       fill: $color-default-white;
     }
   }
@@ -56,12 +56,11 @@
 
   @include viewport--lg {
     width: 450px;
-    height: 306px;
+    min-height: 306px;
   }
 
   @include viewport--md {
     width: 345px;
-    height: auto;
     min-height: 232px;
     padding: 24px 21px 20px 25px;
     border-left: 2px solid $color-blue;
@@ -69,7 +68,7 @@
 
   @include viewport--sm {
     margin-right: 0;
-    width: auto;
+    width: 100%;
     margin-bottom: 20px;
     padding: 24px 16px 24px 26px;
 

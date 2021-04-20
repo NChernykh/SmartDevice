@@ -139,11 +139,13 @@
       transform: rotate(90deg);
     }
 
-    &--show::before {
+    &--show::before,
+    &--nojs::before {
       content: none;
     }
 
-    &--show + .footer__box {
+    &--show + .footer__box,
+    &--nojs + .footer__box {
       display: block;
       padding-bottom: 30px;
     }
@@ -152,6 +154,7 @@
 
 .footer__link {
   display: block;
+  width: fit-content;
   margin: 0;
   font-size: 15px;
   line-height: 25px;

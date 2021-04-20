@@ -7,6 +7,33 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="description" content="Project Name - Smart Device">
 
+<!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Mobile layout by default */
+    background-image: url( "../img/mobile.webp");
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Tablet layout */
+      background-image: url( "../img/tablet.webp");
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1024px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "../img/desktop.webp");
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
+
 <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
 <link rel="preload" href="fonts/roboto-condensed-700.woff2" as="font" crossorigin="anonymous">
 <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
@@ -93,8 +120,8 @@
               <span>+7 (495) 000 52 52</span>
             </a>
           </li>
-          <li class="main-nav__item">
-            <a data-modal="feedback" class="button main-nav__link main-nav__link--button "  href="#" >
+          <li class="main-nav__item main-nav__item--feedback">
+            <a href="../feedback.html" data-modal="feedback" class="button main-nav__link main-nav__link--button "  href="#" >
               <span>Заказать звонок</span>
             </a>
           </li>
@@ -162,7 +189,7 @@
               <p class="company__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
               <p class="company__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
             </div>
-            <button class="button company__button">Подробнее</button>
+            <a class="button company__button" href="#">Подробнее</a>
           </div>
         </div>
       </section>
@@ -175,48 +202,61 @@
               <h3 class="card__title">Производство печатных плат</h3>
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/card-1-mobile@1x.webp, img/content/card-1-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/card-1-tablet@1x.webp, img/content/card-1-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/content/card-1-desktop@1x.webp, img/content/card-1-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" data-srcset="img/content/card-1-mobile@1x.webp, img/content/card-1-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" data-srcset="img/content/card-1-tablet@1x.webp, img/content/card-1-tablet@2x.webp 2x">
+                  <source type="image/webp" data-srcset="img/content/card-1-desktop@1x.webp, img/content/card-1-desktop@2x.webp 2x">
                   <!--1x: 370px; 2x:740px-->
-                  <img src="img/content/card-1-desktop@1x.jpg" srcset="img/content/card-1-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">
+                  <img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                  data-src="img/content/card-1-desktop@1x.jpg" data-srcset="img/content/card-1-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">
                 </picture>
+                <noscript>
+                  <img src="img/content/card-1-desktop@1x.jpg" srcset="img/content/card-1-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">/>
+                </noscript>
               </a>
             </div>
             <div class="card">
               <h3 class="card__title">Монтаж печатных плат</h3>
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/card-2-mobile@1x.webp, img/content/card-2-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/card-2-tablet@1x.webp, img/content/card-2-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/content/card-2-desktop@1x.webp, img/content/card-2-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" data-srcset="img/content/card-2-mobile@1x.webp, img/content/card-2-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" data srcset="img/content/card-2-tablet@1x.webp, img/content/card-2-tablet@2x.webp 2x">
+                  <source type="image/webp" data-srcset="img/content/card-2-desktop@1x.webp, img/content/card-2-desktop@2x.webp 2x">
                   <!--1x: 370px; 2x:740px-->
-                  <img src="img/content/card-2-desktop@1x.jpg" srcset="img/content/card-2-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">
+                  <img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                  data-src="img/content/card-2-desktop@1x.jpg" data-srcset="img/content/card-2-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">
                 </picture>
+                <noscript>
+                  <img src="img/content/card-2-desktop@1x.jpg" srcset="img/content/card-2-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">/>
+                </noscript>
               </a>
             </div>
             <div class="card">
               <h3 class="card__title">Комплектующие для светотехники</h3>
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/content/card-3-mobile@1x.webp, img/content/card-3-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/card-3-tablet@1x.webp, img/content/card-3-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/content/card-3-desktop@1x.webp, img/content/card-3-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" data-srcset="img/content/card-3-mobile@1x.webp, img/content/card-3-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" data-srcset="img/content/card-3-tablet@1x.webp, img/content/card-3-tablet@2x.webp 2x">
+                  <source type="image/webp" data-srcset="img/content/card-3-desktop@1x.webp, img/content/card-3-desktop@2x.webp 2x">
                   <!--1x: 370px; 2x:740px-->
-                  <img src="img/content/card-2-desktop@1x.jpg" srcset="img/content/card-2-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">
+                  <img  class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                  data-src="img/content/card-3-desktop@1x.jpg" data-srcset="img/content/card-3-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">
                 </picture>
+                <noscript>
+                  <img src="img/content/card-3-desktop@1x.jpg" srcset="img/content/card-3-desktop@2x.jpg 2x" width="370" height="620" alt="печатная плата">/>
+                </noscript>
               </a>
             </div>
           </div>
         </div>
       </section>
-      <section class="feedback" id="feedback">
+      <section class="feedback lazyload" id="feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="container">
           <div class="feedback__form">
             <form class="form" action="https://echo.htmlacademy.ru" method="POST">
   <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
   <p class="form__text">Мы проконсультируем Вас бесплатно</p>
+  <span id="message"></span>
   <div class="form__block">
     <div class="form__item">
       <label class="form__label" aria-label="Введите Имя">
@@ -225,7 +265,7 @@
     </div>
     <div class="form__item">
       <label class="form__label" aria-label="Введите номер телефона">
-        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" data-mask="+7 ___ ___-____" required>
+        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" pattern="/^[\d]{1}\ \([\d]{2,3}\)\ [\d]{2,3}-[\d]{2,3}-[\d]{2,3}$/" required>
       </label>
     </div>
   </div>
@@ -238,7 +278,7 @@
     <button class="button form__button" type="submit">Задать вопрос</button>
     <div class="form__item">
       <label class="form__checkbox">
-        <input class="form__checkbox-input" type="checkbox" name="checkbox" checked="checked">
+        <input class="form__checkbox-input" type="checkbox" name="checkbox" checked="checked" required>
         <span class="form__checkbox-name">Я согласен на обработку  персональных данных</span>
       </label>
     </div>
@@ -248,10 +288,9 @@
           </div>
         </div>
       </section>
-      <div class="container">
-        <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-modal="success">modal--success link</a></p>
-      </div>
+      <noscript>
+        <div class="feedback"></div>
+      </noscript>
     </main>
 
     <footer class="footer">
@@ -284,7 +323,7 @@
       </div>
       <div class="footer__colomn blocks">
         <div class="footer__colomn-wrapper blocks__wrapper">
-          <h2 class="footer__subtitle">Разделы сайта</h2>
+          <h2 class="footer__subtitle footer__subtitle--nojs">Разделы сайта</h2>
           <div class="footer__box">
             <div class="blocks__colomn">
               <a href="" class="footer__link">О компании</a>
@@ -302,7 +341,7 @@
       </div>
       <div class="footer__colomn blocks blocks">
         <div class="footer__colomn-wrapper blocks__wrapper blocks__wrapper--contacts">
-          <h2 class="footer__subtitle">Наш офис</h2>
+          <h2 class="footer__subtitle footer__subtitle--nojs">Наш офис</h2>
           <div class="footer__box footer__box--contacts">
             <p class="footer__link">г. Мытищи, Олимпийский проспект, д.10</p>
             <a class="footer__link" href="tel:+74955894050" aria-label="Позонить">+7 (495) 589-40-50</a>
@@ -350,10 +389,10 @@
     </label>
   </div>
   <div class="form__block modal__block">
-    <button class="button form__button modal__item--button" type="submit">Отправить</button>
+    <button class="button form__button modal__item-button" type="submit">Отправить</button>
     <div class="form__item modal__item">
       <label class="form__checkbox modal__checkbox">
-        <input class="form__checkbox-input" type="checkbox" name="checkbox" checked="checked">
+        <input class="form__checkbox-input" type="checkbox" name="checkbox" checked="checked" required>
         <span class="form__checkbox-name">Я согласен на обработку  персональных данных</span>
       </label>
     </div>

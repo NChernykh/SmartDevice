@@ -6,6 +6,7 @@
 
 .main-nav__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -17,6 +18,11 @@
 
   @include viewport--md {
     margin-right: -10px;
+
+    &--feedback {
+      display: none;
+      border: none;
+    }
   }
 
   &--mail {
@@ -50,11 +56,6 @@
     font-size: 14px;
     line-height: 16px;
     border: 1px solid $color-default-white;
-
-    @include viewport--md {
-      display: none;
-      border: none;
-    }
   }
 
   &:hover {
