@@ -1,6 +1,4 @@
 const anchors = [].slice.call(document.querySelectorAll('[data-scroll]'));
-// const animationTime = 600;
-// const framesCount = 30;
 
 const initScroll = () => {
   anchors.forEach(function (item) {

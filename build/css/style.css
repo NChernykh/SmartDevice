@@ -699,13 +699,12 @@ button,
 
 .intro__wrapper {
   margin: 0 auto;
-  padding: 0;
+  padding: 0 88px;
   padding-top: 318px;
   padding-bottom: 280px;
-  max-width: 1420px; }
+  max-width: 1596px; }
   @media (max-width: 1023px) {
     .intro__wrapper {
-      padding: 0 88px;
       padding-top: 188px;
       padding-bottom: 163px; } }
   @media (max-width: 767px) {
@@ -984,17 +983,14 @@ button,
 .company__content {
   height: 174px;
   margin-bottom: 20px;
-  overflow: scroll; }
-  .company__content::-webkit-scrollbar {
-    width: 0; }
+  overflow: hidden; }
   @media (max-width: 1023px) {
     .company__content {
-      height: 220px;
-      margin-bottom: 17px; } }
+      height: 203px;
+      margin-bottom: 35px; } }
   @media (max-width: 767px) {
     .company__content {
-      margin-bottom: 12px;
-      height: 365px; } }
+      height: 343px; } }
 
 .company__text {
   margin: 0;
@@ -1544,7 +1540,7 @@ button,
 
 .social__link {
   display: inline-block;
-  margin-right: 10px; }
+  margin-right: 15px; }
   .social__link:last-child {
     margin-right: 0; }
   .social__link:hover svg {
@@ -1722,6 +1718,11 @@ button,
   padding-left: 50px; }
   .modal__checkbox span::before {
     left: 0; }
+
+.message {
+  font-size: 16px;
+  line-height: 22px;
+  color: #ebebeb; }
 
 .button {
   display: inline-block;

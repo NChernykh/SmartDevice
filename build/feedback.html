@@ -7,6 +7,33 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="description" content="Project Name - Smart Device">
 
+<!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Mobile layout by default */
+    background-image: url( "../img/mobile.jpg");
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Tablet layout */
+      background-image: url( "../img/tablet.jpg");
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1024px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "../img/desktop.jpg");
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
+
 <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
 <link rel="preload" href="fonts/roboto-condensed-700.woff2" as="font" crossorigin="anonymous">
 <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
@@ -22,7 +49,7 @@
       <div class="feedback feedback--page">
         <div class="feedback__wrapper">
           <div class="feedback__form">
-            <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+            <form class="form" id="modal" action="https://echo.htmlacademy.ru" method="POST">
   <h3 class="form__title modal__title">Закажите звонок</h3>
   <p class="form__text modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
   <div class="form__block modal__block">
@@ -33,7 +60,7 @@
     </div>
     <div class="form__item modal__item">
       <label class="form__label" aria-label="Введите номер телефона">
-        <input class="form__input" type="tel" id="tel" name="user_tel" placeholder="Телефон" data-mask="+7 ___ ___-____" required>
+        <input class="form__input" type="tel" name="user_tel" placeholder="Телефон" minlength="10" required>
       </label>
     </div>
   </div>

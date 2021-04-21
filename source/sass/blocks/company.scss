@@ -63,20 +63,16 @@
 .company__content {
   height: 174px;
   margin-bottom: 20px;
-  overflow: scroll;
+  overflow: hidden;
 
-  &::-webkit-scrollbar {
-    width: 0;
-  }
 
   @include viewport--md {
-    height: 220px;
-    margin-bottom: 17px;
+    height: 203px;
+    margin-bottom: 35px;
   }
 
   @include viewport--sm {
-    margin-bottom: 12px;
-    height: 365px;
+    height: 343px;
   }
 }
 

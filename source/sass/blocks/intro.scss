@@ -37,13 +37,12 @@
 
 .intro__wrapper {
   margin: 0 auto;
-  padding: 0;
+  padding: 0 88px;
   padding-top: 318px;
   padding-bottom: 280px;
-  max-width: 1420px;
+  max-width: 1596px;
 
   @include viewport--md {
-    padding: 0 88px;
     padding-top: 188px;
     padding-bottom: 163px;
   }

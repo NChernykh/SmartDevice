@@ -1,28 +1,36 @@
 import Inputmask from 'inputmask';
 
+const feedbackForm = document.getElementById('form');
+const formInput = feedbackForm.querySelector('input[type="tel"]');
+const modal = document.getElementById('modal');
+const modalInput = modal.querySelector('input[type="tel"]');
+
 const initMask = () => {
-  const inputs = document.querySelectorAll('input[type="tel"]');
-  const forms = document.querySelectorAll('form');
-  const reg = /^[\d]{1}\ \([\d]{2,3}\)\ [\d]{2,3}-[\d]{2,3}-[\d]{2,3}$/;
-  const im = new Inputmask('+7 (999) 999-99-99');
-  im.mask(inputs);
 
-  const validity = (regEx, value) => {
-    return regEx.test(value);
-  };
+  const im = new Inputmask('+7 (999) 999-99-99', {removeMaskOnSubmit: true});
+  im.mask(formInput);
+  im.mask(modalInput);
 
-  forms.forEach((form) => {
+  const validateForm = (form, input) => {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      const phone = document.getElementById('tel').value;
 
-      if (validity(reg, phone)) {
-        document.getElementById('message').innerHTML = 'Заполните корректно';
+      if (input.value.length < 10) {
+        const message = document.createElement('span');
+        message.classList.add('message');
+        form.append(message);
+        message.innerHTML = 'Введите полный номер';
+        setTimeout(() => {
+          message.innerHTML = '';
+        }, 2000);
       } else {
         form.submit();
       }
     });
-  });
+  };
+
+  validateForm(feedbackForm, formInput);
+  validateForm(modal, modalInput);
 };
 
 export {initMask};
