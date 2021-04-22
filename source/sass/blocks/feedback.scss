@@ -9,7 +9,7 @@
 
   @include retina {
     background-image: url("../img/bg/feedback-bg-desktop@2x.png");
-    background-size: 3840px auto;
+    background-size: 1747px auto;
   }
 
   @include viewport--lg {
@@ -29,7 +29,13 @@
 
   &--page {
     height: 100vh;
-    padding: 10%;
+    padding: 50px 100px;
+    background-position: center;
+
+    @include viewport--md {
+      height: 100%;
+      padding: 10%;
+    }
   }
 }
 
@@ -47,5 +53,20 @@
   @include viewport--sm {
     width: 100%;
     margin: 0 auto;
+  }
+}
+
+.feedback__logo {
+  display: block;
+  width: 135px;
+  height: 42px;
+  margin-bottom: 100px;
+
+  :hover {
+    opacity: 0.5;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 20px;
   }
 }

@@ -616,13 +616,17 @@ button,
           align-items: center;
   margin: 0;
   padding: 0;
+  padding-top: 10px;
   list-style: none; }
 
 .main-nav__item {
-  margin-right: 50px; }
+  margin-right: 50px;
+  margin-bottom: 10px; }
   @media (max-width: 1023px) {
     .main-nav__item {
-      margin-right: -10px; }
+      margin-right: 22px; }
+      .main-nav__item--last {
+        margin-right: -10px; }
       .main-nav__item--feedback {
         display: none;
         border: none; } }
@@ -644,7 +648,7 @@ button,
   padding-left: 32px;
   text-align: center; }
   .main-nav__link--button {
-    padding: 10px 27px 10px;
+    padding: 12px 27px;
     font-size: 14px;
     line-height: 16px;
     border: 1px solid #ffffff; }
@@ -673,35 +677,33 @@ button,
   background-image: url("../img/bg/intro-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   color: #ffffff; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .intro {
       background-image: url("../img/bg/intro-bg-desktop@2x.jpg");
-      background-size: 3840px 1762px; } }
+      background-size: 1920px auto; } }
   @media (max-width: 1023px) {
     .intro {
       margin-bottom: 54px;
-      background-image: url("../img/bg/intro-bg-tablet@1x.jpg");
-      background-position: center top; } }
+      background-image: url("../img/bg/intro-bg-tablet@1x.jpg"); } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 192dpi), (max-width: 1023px) and (min-resolution: 2dppx) {
     .intro {
       background-image: url("../img/bg/intro-bg-tablet@2x.jpg");
-      background-size: 1540px auto; } }
+      background-size: cover; } }
   @media (max-width: 767px) {
     .intro {
       margin-bottom: 38px;
       background-image: url("../img/bg/intro-bg-mobile@1x.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi), (max-width: 767px) and (min-resolution: 2dppx) {
     .intro {
-      background-image: url("../img/bg/intro-bg-mobile@2x.jpg");
-      background-size: 640px auto; } }
+      background-image: url("../img/bg/intro-bg-mobile@2x.jpg"); } }
 
 .intro__wrapper {
   margin: 0 auto;
   padding: 0 88px;
   padding-top: 318px;
-  padding-bottom: 280px;
+  padding-bottom: 277px;
   max-width: 1596px; }
   @media (max-width: 1023px) {
     .intro__wrapper {
@@ -868,8 +870,7 @@ button,
   padding: 39px 40px 20px 43px;
   border: 1px solid #ebebeb;
   border-left: 3px solid #00b2ff;
-  background-color: #ffffff;
-  cursor: pointer; }
+  background-color: #ffffff; }
   .features__item:hover {
     background-color: #00b2ff; }
     .features__item:hover h3,
@@ -950,7 +951,7 @@ button,
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .company ::before {
         background-image: url("../img/bg/company-bg-desktop@2x.jpg");
-        background-size: 294px auto; } }
+        background-size: 147px auto; } }
     @media (max-width: 1023px) {
       .company ::before {
         top: 0;
@@ -1134,7 +1135,7 @@ button,
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .feedback {
       background-image: url("../img/bg/feedback-bg-desktop@2x.png");
-      background-size: 3840px auto; } }
+      background-size: 1747px auto; } }
   @media (max-width: 1439px) {
     .feedback {
       background-position: 0 150px; } }
@@ -1149,7 +1150,12 @@ button,
       padding-bottom: 12px; } }
   .feedback--page {
     height: 100vh;
-    padding: 10%; }
+    padding: 50px 100px;
+    background-position: center; }
+    @media (max-width: 1023px) {
+      .feedback--page {
+        height: 100%;
+        padding: 10%; } }
 
 .feedback__form {
   width: 50%;
@@ -1164,6 +1170,17 @@ button,
     .feedback__form {
       width: 100%;
       margin: 0 auto; } }
+
+.feedback__logo {
+  display: block;
+  width: 135px;
+  height: 42px;
+  margin-bottom: 100px; }
+  .feedback__logo :hover {
+    opacity: 0.5; }
+  @media (max-width: 767px) {
+    .feedback__logo {
+      margin-bottom: 20px; } }
 
 .form__title {
   margin: 0;

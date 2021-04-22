@@ -10,14 +10,20 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  padding-top: 10px;
   list-style: none;
 }
 
 .main-nav__item {
   margin-right: 50px;
+  margin-bottom: 10px;
 
   @include viewport--md {
-    margin-right: -10px;
+    margin-right: 22px;
+
+    &--last {
+      margin-right: -10px;
+    }
 
     &--feedback {
       display: none;
@@ -52,7 +58,7 @@
   text-align: center;
 
   &--button {
-    padding: 10px 27px 10px;
+    padding: 12px 27px;
     font-size: 14px;
     line-height: 16px;
     border: 1px solid $color-default-white;
